@@ -115,6 +115,194 @@
             #endregion
             #endregion
 
+            #region Example 04 [Budget] - [Switch with Goto]
+            /// Budget is 1000 => Option 01
+            /// Budget is 2000 => Option01, Option 02
+            /// Budget is 3000 => Option01, Option 02, Option 03
+
+            //Console.Write("Please Enter your Budget : ");
+            //int.TryParse(Console.ReadLine(), out int budget);
+
+            //switch(budget)
+            //{
+            //    case 3000:
+            //        Console.WriteLine("Option 03");
+            //        goto case 2000;
+            //        break;
+            //    case 2000:
+            //        Console.WriteLine("Option 02");
+            //        goto case 1000;
+            //        break;
+            //    case 1000:
+            //        Console.WriteLine("Option 01");
+            //        break;
+            //}
+
+            #endregion
+
+            #region Goto Example
+
+            //Retry:
+            //    Console.Write("Enter Name : ");
+            //    string name = Console.ReadLine() ?? "Invalid Name";
+
+            //    if (name == "Mostafa")
+            //        goto Retry;
+            //    else
+            //        Console.WriteLine($"Name is {name}");
+            #endregion
+
+            #endregion
+
+            #region Evolution of Switch in C# 
+
+            #region C# 7.0 [Pattern Matching - Case Guards (when)]
+            //// No Jumb Table will be created
+            //object number = 6; // boxing
+            #region Example 01 [Pattern Matching on Types]
+            //switch(number)
+            //{
+            //    case int Value:
+            //        Console.WriteLine($"{Value} is Integer");
+            //        break;
+            //    case double Value:
+            //        Console.WriteLine($"{Value} is Double");
+            //        break;
+            //    case string Value:
+            //        Console.WriteLine($"{Value} is String");
+            //        break;
+            //    default:
+            //        Console.WriteLine("Invalud");
+            //        break;
+
+            //}
+            #endregion
+
+            #region Example 02 [Case Guards (when)]
+
+            //switch (number)
+            //{
+            //    case int Value when Value < 10 && Value > 5:
+            //        Console.WriteLine($"{Value} is Integer");
+            //        break;
+            //    case double Value:
+            //        Console.WriteLine($"{Value} is Double");
+            //        break;
+            //    case string Value:
+            //        Console.WriteLine($"{Value} is String");
+            //        break;
+            //    default:
+            //        Console.WriteLine("Invalud");
+            //        break;
+            //}
+
+            #endregion
+
+            #region Example 03 [Use-defined Data Type]
+            //object Input = new Person() { Id = 10, Name = "Ahmed", Age = 20 };
+
+            //switch(Input)
+            //{
+            //    case int Value when Value < 10 && Value > 5:
+            //        Console.WriteLine($"{Value} is Integer");
+            //        break;
+            //    case double Value:
+            //        Console.WriteLine($"{Value} is Double");
+            //        break;
+            //    case string Value:
+            //        Console.WriteLine($"{Value} is String");
+            //        break;
+            //    case Person Value when Value.Id == 10:
+            //        Console.WriteLine("I am Person");
+            //        break;
+            //    default:
+            //        Console.WriteLine("Invalud");
+            //        break;
+            //}
+            #endregion
+            #endregion
+
+            #region C# 8.0 [Pattern Matching without alias name - Switch Expressions] Property Pattern
+            #region Example 01 - Pattern Matching without alias name 
+
+            //string Option = Console.ReadLine();
+            //string Message;
+
+            //switch(Option)
+            //{
+            //    case "1":
+            //        Message = "Option 01";
+            //        break;
+            //    case "2":
+            //        Message = "Option 02";
+            //        break;
+            //    case "3":
+            //        Message = "Option 03";
+            //        break;
+            //    default:
+            //        Message = "Invalid";
+            //        break;
+            //}
+
+            //Message = Option switch
+            //{
+            //    "1" => "Option 01",
+            //    "2" => "Option 02",
+            //    "3" => "Option 03",
+            //    _ => "Invalid"
+            //};
+
+            //Console.WriteLine(Message);
+
+            #endregion
+
+            #region Example 02 [Property Pattern]
+            //Person person = new Person() { Id = 10, Name = "Ahmed", Age = 25 };
+
+            //string Message = person switch
+            //{
+            //    { Name: "Ahmed", Age: 10 } => "Hello Ahmed",
+            //    { Name: "Omar" } => "Hello Omar",
+            //    _ => "Invalid"
+            //};
+
+            //Console.WriteLine(Message);
+            #endregion
+
+            #region Example 03 [Nullable Type - Relational Patterns [Partially]]
+
+            //int? Number = 10;
+
+            //string Result = Number switch
+            //{
+            //    null => "Null Value",
+            //    int X when X > 0 => "Positive",
+            //    int X when X < 0 => "Negative",
+            //    _ => "Invalid"
+            //};
+
+            //Console.WriteLine(Number);
+
+            #endregion
+            #endregion
+
+            #region C# 9.0 [Switch Expression with Relational Patterns - Logucal Patterns - Enhanced Property Matching]
+
+            #region Example 01 [Relational Patterns] [Logical Patterns]
+            //int Number = -5;
+
+            //string Message = Number switch
+            //{
+            //    < 10 => "Less than 10",
+            //    >= 10 and <= 20 => "Between 10 and 20",
+            //    > 20 or < 0 => "Outside Range",
+            //};
+
+            //Console.WriteLine(Message);
+            #endregion
+
+            #endregion
+
             #endregion
 
             #endregion
