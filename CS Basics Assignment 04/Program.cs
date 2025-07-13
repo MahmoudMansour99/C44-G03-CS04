@@ -102,6 +102,22 @@
             //Console.WriteLine($"Percentage Marks = {Percentage} %");
 
             #endregion
+
+            #region 6- Write a program to allow the user to enter a string and print the REVERSE of it.
+
+            Console.Write("Please enter a string: ");
+            string input = Console.ReadLine();
+
+            Console.Write("Reversed string: ");
+
+            for (int i = input.Length - 1; i >= 0; i--)
+            {
+                Console.Write(input[i]);
+            }
+
+            Console.WriteLine();
+
+            #endregion
         }
     }
 }
