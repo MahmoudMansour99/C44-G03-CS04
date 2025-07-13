@@ -123,20 +123,58 @@ namespace CS_Basics_Assignment_04
 
             #region 7- Write a program to allow the user to enter int and print the REVERSED of it.
 
-            Console.Write("Please Enter an Integer: ");
-            string input = Console.ReadLine();
-            
-            if (input.StartsWith("-")) {
-                input = input.Substring(1);
-                Console.WriteLine("-");
-            }
+            //Console.Write("Please Enter an Integer: ");
+            //string input = Console.ReadLine();
 
-            Console.Write("Reversed Number: ");
+            //if (input.StartsWith("-")) {
+            //    input = input.Substring(1);
+            //    Console.WriteLine("-");
+            //}
 
-            for (int i = input.Length - 1; i >= 0 ; i--)
+            //Console.Write("Reversed Number: ");
+
+            //for (int i = input.Length - 1; i >= 0 ; i--)
+            //{
+            //    Console.Write(input[i]);
+            //}
+
+            #endregion
+
+            #region 8- Write a program in C# Sharp to find prime numbers within a range of numbers.
+            /// Test Data :
+            /// Input starting number of ranges: 1
+            /// Input ending number of range : 50
+            /// 
+            Console.Write("Enter the start number: ");
+            int.TryParse(Console.ReadLine(), out int start);
+
+            Console.Write("Enter the end number: ");
+            int.TryParse(Console.ReadLine(), out int end);
+
+            Console.WriteLine($"\nPrime numbers between {start} and {end} are:");
+
+            for (int i = start; i <= end; i++)
             {
-                Console.Write(input[i]);
+                if (i < 2)
+                    continue; 
+
+                bool isPrime = true;
+
+                for (int y = 2; y <= i / 2; y++)
+                {
+                    if (i % y == 0)
+                    {
+                        isPrime = false;
+                        break;
+                    }
+                }
+
+                if (isPrime)
+                {
+                    Console.Write(i + " ");
+                }
             }
+            Console.WriteLine(); 
 
             #endregion
         }
