@@ -1,4 +1,6 @@
-﻿namespace CS_Basics_Assignment_04
+﻿using System.ComponentModel;
+
+namespace CS_Basics_Assignment_04
 {
     internal class Program
     {
@@ -105,17 +107,36 @@
 
             #region 6- Write a program to allow the user to enter a string and print the REVERSE of it.
 
-            Console.Write("Please enter a string: ");
+            //Console.Write("Please enter a string: ");
+            //string input = Console.ReadLine();
+
+            //Console.Write("Reversed string: ");
+
+            //for (int i = input.Length - 1; i >= 0; i--)
+            //{
+            //    Console.Write(input[i]);
+            //}
+
+            //Console.WriteLine();
+
+            #endregion
+
+            #region 7- Write a program to allow the user to enter int and print the REVERSED of it.
+
+            Console.Write("Please Enter an Integer: ");
             string input = Console.ReadLine();
+            
+            if (input.StartsWith("-")) {
+                input = input.Substring(1);
+                Console.WriteLine("-");
+            }
 
-            Console.Write("Reversed string: ");
+            Console.Write("Reversed Number: ");
 
-            for (int i = input.Length - 1; i >= 0; i--)
+            for (int i = input.Length - 1; i >= 0 ; i--)
             {
                 Console.Write(input[i]);
             }
-
-            Console.WriteLine();
 
             #endregion
         }
