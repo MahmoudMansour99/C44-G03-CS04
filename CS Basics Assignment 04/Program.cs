@@ -209,6 +209,7 @@ namespace CS_Basics_Assignment_04
 
             #region 10- Create a program that asks the user to input three points (x1, y1), (x2, y2), and (x3, y3), and determines whether these points lie on a single straight line.
 
+
             Console.WriteLine("Enter coordinates for point 1:");
             Console.Write("x1: ");
             int.TryParse(Console.ReadLine(), out int x1);
