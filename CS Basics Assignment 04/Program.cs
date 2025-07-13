@@ -184,24 +184,59 @@ namespace CS_Basics_Assignment_04
             /// Expected Output :
             /// The Binary of 25 is 11001.
             /// 
-            Console.Write("Enter a decimal number: ");
-            int.TryParse(Console.ReadLine(), out int number);
+            //Console.Write("Enter a decimal number: ");
+            //int.TryParse(Console.ReadLine(), out int number);
 
-            if (number == 0)
+            //if (number == 0)
+            //{
+            //    Console.WriteLine("Binary: 0");
+            //}
+            //else
+            //{
+            //    string binary = "";
+
+            //    for (int i = number; i > 0; i /= 2)
+            //    {
+            //        int remainder = i % 2;
+            //        binary = remainder + binary; 
+            //    }
+
+            //    Console.WriteLine($"The Binary of {number} is {binary}");
+            //}
+
+
+            #endregion
+
+            #region 10- Create a program that asks the user to input three points (x1, y1), (x2, y2), and (x3, y3), and determines whether these points lie on a single straight line.
+
+            Console.WriteLine("Enter coordinates for point 1:");
+            Console.Write("x1: ");
+            int.TryParse(Console.ReadLine(), out int x1);
+            Console.Write("y1: ");
+            int.TryParse(Console.ReadLine(), out int y1);
+
+            Console.WriteLine("Enter coordinates for point 2:");
+            Console.Write("x2: ");
+            int.TryParse(Console.ReadLine(), out int x2);
+            Console.Write("y2: ");
+            int.TryParse(Console.ReadLine(), out int y2);
+
+            Console.WriteLine("Enter coordinates for point 3:");
+            Console.Write("x3: ");
+            int.TryParse(Console.ReadLine(), out int x3);
+            Console.Write("y3: ");
+            int.TryParse(Console.ReadLine(), out int y3);
+
+            int leftSide = (y2 - y1) * (x3 - x2);
+            int rightSide = (y3 - y2) * (x2 - x1);
+
+            if (leftSide == rightSide)
             {
-                Console.WriteLine("Binary: 0");
+                Console.WriteLine("The points lie on a straight line.");
             }
             else
             {
-                string binary = "";
-
-                for (int i = number; i > 0; i /= 2)
-                {
-                    int remainder = i % 2;
-                    binary = remainder + binary; 
-                }
-
-                Console.WriteLine($"The Binary of {number} is {binary}");
+                Console.WriteLine("The points do NOT lie on a straight line.");
             }
 
 
