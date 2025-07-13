@@ -206,40 +206,61 @@ namespace CS_Basics_Assignment_04
 
 
             #endregion
-
             #region 10- Create a program that asks the user to input three points (x1, y1), (x2, y2), and (x3, y3), and determines whether these points lie on a single straight line.
 
+            //Console.WriteLine("Enter coordinates for point 1:");
+            //Console.Write("x1: ");
+            //int.TryParse(Console.ReadLine(), out int x1);
+            //Console.Write("y1: ");
+            //int.TryParse(Console.ReadLine(), out int y1);
 
-            Console.WriteLine("Enter coordinates for point 1:");
-            Console.Write("x1: ");
-            int.TryParse(Console.ReadLine(), out int x1);
-            Console.Write("y1: ");
-            int.TryParse(Console.ReadLine(), out int y1);
+            //Console.WriteLine("Enter coordinates for point 2:");
+            //Console.Write("x2: ");
+            //int.TryParse(Console.ReadLine(), out int x2);
+            //Console.Write("y2: ");
+            //int.TryParse(Console.ReadLine(), out int y2);
 
-            Console.WriteLine("Enter coordinates for point 2:");
-            Console.Write("x2: ");
-            int.TryParse(Console.ReadLine(), out int x2);
-            Console.Write("y2: ");
-            int.TryParse(Console.ReadLine(), out int y2);
+            //Console.WriteLine("Enter coordinates for point 3:");
+            //Console.Write("x3: ");
+            //int.TryParse(Console.ReadLine(), out int x3);
+            //Console.Write("y3: ");
+            //int.TryParse(Console.ReadLine(), out int y3);
 
-            Console.WriteLine("Enter coordinates for point 3:");
-            Console.Write("x3: ");
-            int.TryParse(Console.ReadLine(), out int x3);
-            Console.Write("y3: ");
-            int.TryParse(Console.ReadLine(), out int y3);
+            //int leftSide = (y2 - y1) * (x3 - x2);
+            //int rightSide = (y3 - y2) * (x2 - x1);
 
-            int leftSide = (y2 - y1) * (x3 - x2);
-            int rightSide = (y3 - y2) * (x2 - x1);
+            //if (leftSide == rightSide)
+            //{
+            //    Console.WriteLine("The points lie on a straight line.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("The points do NOT lie on a straight line.");
+            //}
 
-            if (leftSide == rightSide)
+
+            #endregion
+            #region 11- . Write a program that prints an identity matrix using for loop, in other words takes a value n from the user and shows the identity table of size n * n.
+            Console.Write("Enter the size of the identity matrix (n): ");
+            int.TryParse(Console.ReadLine(), out int n);
+
+            Console.WriteLine($"\nIdentity matrix of size {n}x{n}:\n");
+
+            for (int i = 0; i < n; i++)
             {
-                Console.WriteLine("The points lie on a straight line.");
+                for (int y = 0; y < n; y++)
+                {
+                    if (i == y)
+                    {
+                        Console.Write("1 ");
+                    }
+                    else
+                    {
+                        Console.Write("0 ");
+                    }
+                }
+                Console.WriteLine();
             }
-            else
-            {
-                Console.WriteLine("The points do NOT lie on a straight line.");
-            }
-
 
             #endregion
         }
